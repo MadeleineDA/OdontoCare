@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OdontoCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e9321e9bbd.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="font-sans text-gray-800 overflow-x-hidden">
+
+  <!-- <NAVBAR>   -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 sm:px-9 py-5 flex items-center justify-between z-50">
+  </header>
+  <div id="movil" class="bg-slate-900/60 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0  flex-col gap-16 p-6 justify-center items-center hidden">
+  </div>
+  <div class="bg-radial from-blue-500 via-purple-500 to-pink-500 w-64 h-64 rounded-full">
+  </div>
+
+  <!-- SECCIÓN PRINCIPAL (Hero) -->
+  <section class="-mt-28 pl-8 pr-8 md:pl-16 md:pr-20 lg:pr-14 xl:pr-32 xl:pl-36 flex flex-col md:flex-row items-center xl:gap-2 gap-8 md:mb-5">
+    
+  <!-- 🔵 CÍRCULOS DECORATIVOS -->
+  <!-- Círculo grande izquierdo -->
+  <div class="animate-[bounce_6s_infinite] absolute bottom-[20rem] left-2 w-80 h-80 rounded-full bg-[radial-gradient(circle,_#87ceeb,_#d3d3d3)] -z-10 hidden sm:flex"></div>
+
+  <!-- Círculo pequeño encima del izquierdo -->
+  <div class="animate-[bounce_6s_infinite] absolute bottom-[13rem] left-10 w-20 h-20 rounded-full bg-[radial-gradient(circle,_#87ceeb,_#d3d3d3)] -z-10 hidden sm:flex"></div>
+
+  <!-- Círculo grande derecho -->
+  <div class="animate-[bounce_6s_infinite] absolute bottom-[4rem] right-0 w-60 h-60 rounded-full bg-[radial-gradient(circle,_#87ceeb,_#d3d3d3)] -z-10 hidden sm:flex"></div>
+
+
+    <!-- Imagen doctora -->
+    <div class="justify-center xl:pr-24 md:justify-start hidden sm:flex">
+      <img src="../../imag/doctoraHome.png" alt="doctoraHome" class="w-64 md:w-80 lg:w-96 rounded-lg">
+    </div>
+
+    <!-- Texto y botón -->
+    <div class="flex-1 space-y-6">
+  <h1 class="text-4xl md:text-3xl lg:text-5xl text-black relative text-center md:text-left" style="font-family: 'Shrikhand', cursive;">
+  ¡Cuidamos tu sonrisa, <br>
+  <span class="relative inline-block">
+    cuidamos de ti!
+    <svg class="absolute inset-0 w-full h-full z-[-1]" viewBox="30 30 100 50" preserveAspectRatio="none">
+      <path d="M0,50 C50,10 90,50 200,80 L200,80 L0,80 Z" fill="url(#gradient)" />
+      <defs>
+        <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#d9d9d9"/>
+          <stop offset="50%" stop-color="#c2e9ff"/>
+          <stop offset="100%" stop-color="#d9d9d9"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </span>
+</h1>
+      <p class="text-zinc-600 font-semibold text-justify">
+        Somos OdontoCare, tu clínica odontológica de confianza, donde cada sonrisa importa. Combinamos experiencia, dedicación y tecnología de vanguardia para ofrecer tratamientos modernos, efectivos y completamente personalizados, pensados para tu comodidad y bienestar. Nuestro compromiso es que cada visita sea agradable, segura y reconfortante, cuidando tu salud bucal y ayudándote a lucir una sonrisa saludable, radiante y llena de confianza.
+      </p>
+      <div class="text-center md:text-left md:mb-20">
+          <button class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">
+            MÁS INFORMACIÓN
+          </button>
+        </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN TECNOLOGÍA Y TALENTO -->
+  <section class="bg-stone-50 py-24 px-6 md:px-6 mt-8">
+  <h2 class="text-4xl md:text-3xl lg:text-5xl text-black relative text-center md:text-left font-sans font-bold mb-12">
+    Tecnología y Talento
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Caja 1 -->
+    <div class=" bg-zinc-950 p-6 hover:scale-105 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col justify-between h-full">
+      <div>
+        <div class="mb-3 text-3xl text-stone-600">
+          <img src="../../imag/tecnologia3.png" alt="Endodoncia" class="w-14 h-14">
+        </div>
+        <h3 class="font-sans font-bold text-lg text-zinc-100 mb-4">
+          Instrumentos y equipos de última tecnología
+        </h3>
+        <p class="text-sm text-zinc-400 mb-5 text-justify">
+          En nuestro centro odontológico contamos con equipos tomográficos que capturan imágenes tridimensionales de cualquier estructura dentaria y ósea. 
+          Su altísima resolución garantiza el detalle necesario para lograr con precisión el diagnóstico y el tratamiento de casos complejos. 
+          Cirugías orales, implantes, fracturas radiculares, piezas dentarias impactadas, lesiones óseas, etc.
+        </p>
+      </div>
+      <button class="bg-sky-700 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-sky-500 w-40">
+        Contáctanos ⟶
+      </button>
+    </div>
+
+    <!-- Caja 2 -->
+    <div class=" bg-zinc-950 p-6 hover:scale-105 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col justify-between h-full">
+      <div>
+        <div class="mb-3 text-3xl text-stone-950">
+          <img src="../../imag/tecnologia2.png" alt="Endodoncia" class="w-14 h-14">
+        </div>
+        <h3 class="font-sans font-bold text-lg text-zinc-100 mb-4">
+          Cuidado dental asequible
+        </h3>
+        <p class="text-sm text-zinc-400 mb-5 text-justify">
+          Su estado dental es muy importante para nosotros. 
+          Por eso, hacemos diagnósticos, tratamientos preventivos y correctivos. 
+          Tenemos una solución estética para que logres la sonrisa de tus sueños, 
+          y todo a costos muy razonables. Hacemos presupuestos sin compromisos.
+        </p>
+      </div>
+      <button class="bg-sky-700  shadow-black/40 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-sky-500 w-44">
+        Nuestros servicios ⟶
+      </button>
+    </div>
+
+    <!-- Caja 3 -->
+    <div class=" bg-zinc-950 p-6 hover:scale-105 rounded-2xl shadow-lg  hover:shadow-xl transition flex flex-col justify-between h-full">
+      <div>
+        <div class="mb-3 text-3xl text-stone-600">
+          <img src="../../imag/tecnologia1.png" alt="Endodoncia" class="w-12 h-12">
+        </div>
+        <h3 class="font-sans font-bold text-lg text-zinc-100 mb-4">
+          Equipo de talentosos odontólogos
+        </h3>
+        <p class="text-sm text-zinc-400 mb-5 text-justify">
+          Equipo de talentosos odontólogos y ortodoncistas. 
+          Contamos con un completo equipo de profesionales con experiencia en ortodoncia, endodoncia, periodoncia, prótesis, cirugía e implantes. 
+          Nuestra clínica cuenta con los mejores especialistas y personal de apoyo para atender todo lo relacionado con imagenología y anestesia.
+        </p>
+      </div>
+      <button class="bg-sky-700  text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-sky-500 w-40">
+        Quiénes somos ⟶
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- SECCIÓN SERVICIOS -->
+<section class="relative py-16 px-6 md:px-6 overflow-hidden bg-white">
+  <!-- Fondo diagonal azul -->
+  <div class="absolute inset-0" 
+       style="background: linear-gradient(110deg, #e0f2fe 0%, #d5eefd 50%, #caeafc 100%);
+              transform: skewY(-16deg);
+              transform-origin: top left;
+              z-index: 0;">
+  </div>
+
+  <!-- Contenido -->
+  <div class="relative z-10">
+    <h2 class="text-4xl md:text-3xl lg:text-5xl text-black relative text-center font-sans font-bold mb-12">Servicios</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Servicio 1 -->
+      <div class="border-y-8 border-x-8 border-gray-400/20 hover:scale-105 bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-xl transition">
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-4 border-sky-200">
+            <img src="../../imag/servicio1.png" alt="Odontología" class="w-10 h-10">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold mb-3 text-stone-950">Odontología General</h3>
+        <p class="text-gray-600 mb-6 text-justify">Diagnóstico y tratamiento primario de los problemas odontológicos que afectan la salud bucodental del paciente.</p>
+        <button class="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="border-y-8 border-x-8 border-gray-400/20 hover:scale-105 bg-white rounded-3xl shadow-md p-8 text-center hover:shadow-xl transition">
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-4 border-sky-200">
+            <img src="../../imag/servicio2.png" alt="Ortodoncia" class="w-10 h-10">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold mb-3 text-stone-950">Ortodoncia</h3>
+        <p class="text-gray-600 mb-6 text-justify">Corrección de las estructuras dentomaxilofaciales, para lograr un aspecto estético y funcional.</p>
+        <button class="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="border-y-8 border-x-8 border-gray-400/20 hover:scale-105 bg-white rounded-3xl shadow-md p-8 text-center hover:shadow-xl transition">
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-4 border-sky-200">
+            <img src="../../imag/servicio3.png" alt="Endodoncia" class="w-10 h-10">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold mb-3 text-stone-950">Endodoncia</h3>
+        <p class="text-gray-600 mb-6 text-justify">Tratamiento de piezas dentales que han sufrido de pulpitis, recuperándose la funcionalidad y la estética.</p>
+        <button class="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="border-y-8 border-x-8 border-gray-400/20 hover:scale-105 bg-white rounded-3xl shadow-md p-8 text-center hover:shadow-xl transition">
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-4 border-sky-200">
+            <img src="../../imag/servicio4.png" alt="Cirugía Bucal" class="w-10 h-10">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold mb-3 text-stone-950">Cirugía Bucal</h3>
+        <p class="text-gray-600 mb-6 text-justify">Trata patologías, lesiones por traumas y defectos congénitos de toda el área maxilofacial, y soluciones estéticas.</p>
+        <button class="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+      </div>
+
+      <!-- Servicio 5 -->
+      <div class="border-y-8 border-x-8 border-gray-400/20 hover:scale-105 bg-white rounded-3xl shadow-md p-8 text-center hover:shadow-xl transition">
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-4 border-sky-200">
+            <img src="../../imag/servicio5.png" alt="Implantes" class="w-10 h-10">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold mb-3 text-stone-950">Implantes</h3>
+        <p class="text-gray-600 mb-6 text-justify">Los implantes dentales proveen la raíz a una pieza ausente, para que se pueda reconstruir artificialmente.</p>
+        <button class="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+      </div>
+
+      <!-- Servicio 6 -->
+      <div class="border-y-8 border-x-8 border-gray-400/20 hover:scale-105 bg-white rounded-3xl shadow-md p-8 text-center hover:shadow-xl transition">
+        <div class="flex justify-center mb-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded-full border-4 border-sky-200">
+            <img src="../../imag/servicio6.png" alt="Estética Dental" class="w-10 h-10">
+          </div>
+        </div>
+        <h3 class="text-lg font-bold mb-3 text-stone-950">Estética y Prótesis Dental</h3>
+        <p class="text-gray-600 mb-6 text-justify">Especialidades odontológicas creadas para lograr una imagen armónica unida a un funcionamiento idóneo.</p>
+        <button class="bg-sky-400 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN NUESTRA TRAYECTORIA -->
+<section class="relative bg-slate-50 pt-6 pb-6 md:pt-6 md:pb-8 lg:pb-1 xl:pt-0.5 xl:pb-20 xl:px-10 overflow-hidden">
+  <!-- Fondo azul claro con forma curva -->
+  <div class="absolute -bottom-0  w-full h-[400px] bg-sky-100 rounded-t-[500px] z-0 "></div>
+
+  <div class="relative flex flex-col md:flex-row items-center w-full lg:grid-cols-3">
+    
+    <!-- Imagen del profesional dental -->
+    <div class="hidden md:flex justify-start md:w-1/2 xl:w-[55%] md:pl-0">
+      <img 
+        src="../../imag/trayectoria.png" 
+        alt="Dentista trabajando" 
+        class="w-full max-w-lg object-contain md:ml-[-3rem] xl:ml-[-3rem]" 
+      />
+    </div>
+
+    <!-- Texto y datos -->
+    <div class="w-full md:w-1/2 px-4 md:px-0 text-center md:text-left space-y-14">
+      <h2 class="text-2xl lg:text-4xl md:text-3xl xl:text-6xl text-black font-extrabold leading-snug  lg:-ml-20 xl:-ml-40">
+        NUESTRA <span class="block">TRAYECTORIA NOS DEFINE</span>
+      </h2>
+
+      <!-- Contenedor de métricas -->
+      <div class="flex sm:flex-row flex-wrap justify-center md:justify-start gap-8 lg:-ml-20 xl:-ml-40">
+        
+        <!-- Caja 1 -->
+        <div class="bg-gray-950/50 text-white rounded-xl shadow-lg px-4 py-6 flex items-center gap-4">
+          <div class="text-3xl">
+            <img src="../../imag/trayectoria1.png" alt="experiencia" class="w-12 h-12"></div>
+          <div>
+            <p class="text-3xl font-bold">+ 20</p>
+            <p class="text-sm uppercase tracking-wide">Años de experiencia</p>
+          </div> 
+        </div>
+
+        <!-- Caja 2 -->
+        <div class="bg-gray-950/50 text-white rounded-xl shadow-lg px-2 py-4 flex items-center gap-4">
+  <div class="text-3xl">
+    <img src="../../imag/tecnologia3.png" alt="Intervenciones" class="w-12 h-12">
+  </div>
+  <div>
+    <p class="text-2xl font-bold">+ 580000</p>
+    <p class="text-sm uppercase tracking-wide">Intervenciones electivas</p>
+  </div>
+</div>
+
+        <!-- Caja 3 -->
+        <div class="bg-gray-950/50 text-white rounded-xl shadow-lg px-4 py-6 flex items-center gap-4">
+          <div class="text-3xl">
+            <img src="../../imag/trayectoria3.png" alt="Estadisticas" class="w-12 h-12">
+          </div>
+          <div>
+            <p class="text-2xl font-bold">+ 470000</p>
+            <p class="text-sm uppercase tracking-wide">Casos resueltos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN ¿QUÉ NOS HACE DIFERENTES? -->
+<section class="py-16 px-6 md:px-16 bg-white items-center">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <!-- Título -->
+    <div class="w-full md:w-1/3">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-zinc-500 leading-tight text-center md:text-left">
+        ¿Qué nos hace <br /> diferentes?
+      </h2>
+    </div>
+
+    <!-- Contenido -->
+    <div class="md:w-2/3 flex flex-col gap-10">
+      
+      <!-- Bloque 1 -->
+      <div class="flex items-start gap-6 ">
+        <div class="flex-shrink-0 w-14 h-14 rounded-full border-4 border-sky-300 flex items-center justify-center bg-white shadow-sm">
+          <img src="../../imag/diferentes1.png" alt="Atención personalizada" class="w-8 h-8 text-sky-400 ">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-zinc-950">Atención personalizada</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mt-2 text-justify">
+            Partimos de la premisa de que cada paciente es único, en consecuencia, su caso es particular. Es por ello, que en nuestro Centro Odontológico llevamos un estricto control para recuperar tu salud bucodental y lograr estéticamente la sonrisa de tus sueños. El contacto paciente – odontólogo es cercano y cordial.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bloque 2 -->
+      <div class="flex items-start gap-6">
+        <div class="flex-shrink-0 w-14 h-14 rounded-full border-4 border-sky-300 flex items-center justify-center bg-white shadow-sm">
+          <img src="../../imag/diferentes2.png" alt="Diagnóstico integral" class="w-12 h-12">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-zinc-950">Diagnóstico integral</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mt-2 text-justify">
+            Independientemente de la razón por la cual acudas a nuestro Centro Odontológico, siempre haremos una evaluación integral. Esto incluye una radiografía panorámica para identificar cualquier daño oculto en tu dentadura que pueda causarte molestias o daños estéticos en el futuro.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bloque 3 -->
+      <div class="flex items-start gap-6">
+        <div class="flex-shrink-0 w-14 h-14 rounded-full border-4 border-sky-300 flex items-center justify-center bg-white shadow-sm">
+          <img src="../../imag/diferentes3.png" alt="Control y seguimiento" class="w-12 h-12">
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-zinc-950">Control y seguimiento</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mt-2 text-justify">
+            Servicios de odontología y estética dental humanizada. Nuestros especialistas y personal de apoyo logístico estarán muy pendientes de tu caso. Hacemos un seguimiento cercano, con el fin de que culmines tu tratamiento odontológico o estético de acuerdo a la planificación acordada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN AGENDA TU CITA -->
+  <section class="bg-zinc-100 py-16 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
+  <!-- Texto izquierda -->
+  <div class="md:w-1/2 text-center md:text-left ">
+    <h2 class="text-3xl md:text-5xl sm:xl font-extrabold text-black leading-snug">
+      ¡Agenda tu cita para una <br class="hidden md:block">
+      evaluación integral con <br class="hidden md:block">
+      nuestros especialistas!
+    </h2>
+  </div>
+
+  <!-- Tarjeta derecha -->
+  <div class="relative md:w-1/2 flex justify-center">
+    <!-- Fondo decorativo -->
+   <div class="absolute top-0 right-0 w-72 h-96 bg-cyan-100 rounded-3xl rotate-6 z-0"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-96 bg-sky-200 rounded-3xl -rotate-6 z-0"></div>
+    <!-- Tarjeta principal -->
+    <div class="relative z-10 bg-white shadow-xl rounded-3xl p-8 max-w-sm w-full h-[420px] text-center md:text-left">
+      <h3 class="text-3xl font-bold mb-6 text-zinc-950 text-center">¡Agenda ya!</h3>
+
+      <div class="space-y-8 text-zinc-700">
+  <div class="flex items-center justify-center md:justify-start gap-3 sm:text-base whitespace-nowrap">
+    <img src="../../imag/agenda1.png" alt="Correo" class="w-9 h-9">
+    <p><span class="font-semibold  ">Email:</span> odontocare2@gmail.com</p>
+  </div>
+
+  <div class="flex items-center md:justify-start gap-3 sm:text-base whitespace-nowrap">
+    <img src="../../imag/agenda2.png" alt="WhatsApp" class="w-9 h-9">
+    <p><span class="font-semibold">WhatsApp:</span> +584242511400</p>
+  </div>
+
+  <div class="flex items-center md:justify-start gap-3 ">
+    <img src="../../imag/agenda3.png" alt="Instagram" class="w-9 h-9">
+    <p><span class="font-semibold">Instagram:</span> @odontocare</p>
+  </div>
+</div>
+      <button class="mt-8 bg-sky-400 text-white font-semibold py-3 px-6 rounded-full hover:bg-sky-600 transition w-full flex items-center justify-center gap-2">
+        <i class="fa-regular fa-calendar-days "></i> PIDE UNA CITA AQUÍ
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-zinc-950 py-6 px-2 text-center sm:text-sm md:text-lg lg:text-lg xl:text-lg text-zinc-100 flex flex-col items-center justify-center gap-6">
+  <!-- Dirección -->
+  <p class="flex items-center gap-2 font-semibold">
+    <i class="fa-solid fa-location-dot"></i>
+    C.C. Millennium torre de oficinas piso 2 oficina N2-02. Los Dos Caminos
+  </p>
+
+  <!-- Iconos sociales -->
+  <div class="flex items-center gap-8 justify-center">
+    <!-- Instagram -->
+    <a href="#" class="flex flex-col items-center text-pink-500 hover:text-pink-600">
+      <img src="../../imag/agenda3.png" alt="Instagram" class="w-7 h-7">
+      <span class="text-xs mt-1 font-semibold">Instagram</span>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="#" class="flex flex-col items-center text-green-500 hover:text-green-600">
+      <img src="../../imag/agenda2.png" alt="WhatsApp" class="w-7 h-7">
+      <span class="text-xs mt-1 font-semibold">Whatsapp</span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="#" class="flex flex-col items-center text-blue-600 hover:text-blue-700">
+      <img src="../../imag/facebook.png" alt="WhatsApp" class="w-7 h-7">
+      <span class="text-xs mt-1 font-semibold">Facebook</span>
+    </a>
+  </div>
+</footer>
+  <!-- Script del Navbar -->
+<script src="../components/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Registro</title>
+  </head>
+  <body class="bg-zinc-50">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-indigo-700 h-16"></nav>
+
+    <!-- Notificaciones -->
+    <div id="notification" class="fixed top-20 right-0 left-0"></div>
+
+    <div class="pt-16 h-screen flex justify-center items-center px-4">
+      <div class="flex flex-col lg:flex-row w-full max-w-7xl bg-white rounded-3xl shadow-xl overflow-hidden">
+
+        <!-- Lado izquierdo: Imagen -->
+        <div class="hidden lg:flex lg:w-1/2 justify-center items-center bg-zinc-50 p-10">
+          <img src="/imag/signup.svg" alt="imagen de login" />
+        </div>
+
+        <!-- Lado derecho: Formulario -->
+        <form id="form" class="lg:w-1/2 flex flex-col gap-4 p-10 bg-white">
+
+          <h2 class="text-sky-400 font-bold text-xl md:text-2xl mb-4">Registro</h2>
+
+          <!-- Nombre -->
+          <div class="flex flex-col gap-2">
+            <label for="name-input" class="font-bold text-zinc-900">
+              Nombre <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="name-input"
+              name="name-input"
+              autocomplete="off"
+              placeholder="Ingresa tu nombre y apellido"
+              class="rounded-full p-2 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-300"
+            />
+            <p class="text-xs text-zinc-800">
+              Tanto el nombre como el apellido deben comenzar en mayusculas.
+            </p>
+          </div>
+
+          <!-- Correo -->
+          <div class="flex flex-col gap-2">
+            <label for="email-input" class="font-bold text-zinc-900">
+              Correo <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="email-input"
+              name="email-input"
+              autocomplete="off"
+              placeholder="ejemplo@correo.com"
+              class="rounded-full p-2 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-300"
+            />
+            <p class="text-xs text-zinc-800">El correo es requerido.</p>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="flex flex-col gap-2">
+            <label for="password-input" class="font-bold text-zinc-900">
+              Contraseña <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="password"
+              id="password-input"
+              name="password-input"
+              autocomplete="off"
+              class="rounded-full p-2 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-300"
+            />
+            <p class="text-xs text-zinc-800">
+              Debe tener al menos una letra.<br>
+              Debe tener al menos un numero.<br>
+              Debe tener al menos 8 caracteres.
+            </p>
+          </div>
+
+          <!-- Confirmar contraseña -->
+          <div class="flex flex-col gap-2">
+            <label for="match-input" class="font-bold text-zinc-900">
+              Confirmar contraseña <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="password"
+              id="match-input"
+              name="match-input"
+              autocomplete="off"
+              class="rounded-full p-2 border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-300"
+            />
+            <p class="text-xs text-zinc-800">
+              Debe coincidir con la contraseña ingresada.
+            </p>
+          </div>
+
+          <!-- Botón -->
+          <button 
+            id="form-btn"
+            type="submit"
+            disabled
+            class="mt-4 py-2 bg-indigo-700 text-white font-bold rounded-full hover:bg-indigo-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Registrar
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
