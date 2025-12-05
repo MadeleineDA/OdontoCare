@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/styles/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Registro</title>
+    <title>Login</title>
   </head>
   <body class="bg-white">
 
@@ -23,43 +23,26 @@
         <div class="hidden lg:flex lg:w-1/2 items-center justify-center bg-sky-50 p-14">
           <div class="max-w-sm flex flex-col gap-6">
             <img src="/imag/signup-user.svg" alt="imagen de login" class="w-20 mb-4" />
-            <h2 class="text-4xl font-extrabold text-zinc-950">Crea una cuenta</h2>
+            <h2 class="text-4xl font-extrabold text-zinc-950">Inicia sesión</h2>
             <p class="text-zinc-600 leading-relaxed">
-              Crea tu cuenta en OdontoCare y agenda tus citas fácilmente.
-              Regístrate en segundos y accede a todos nuestros servicios.
+              Inicia sesión en OdontoCare y accede a tus citas y servicios fácilmente.
             </p>
             <p class="text-zinc-700">
-              ¿Ya estás registrado?
-              <a href="/login/" class="text-sky-400 font-semibold hover:underline">Iniciar sesión</a>
+              ¿No tienes cuenta?
+              <a href="/registro/" class="text-sky-400 font-semibold hover:underline">Regístrate</a>
             </p>
-            <a href="/login/" class="w-full text-center bg-sky-200 text-zinc-950 font-bold py-2 rounded-full hover:bg-sky-300 transition">Iniciar sesión</a>
+            <a href="/registro/" class="w-full text-center bg-sky-200 text-zinc-950 font-bold py-2 rounded-full hover:bg-sky-300 transition">Crear cuenta</a>
           </div>
         </div>
 
         <!-- Lado derecho: Formulario -->
         <form id="form" class="lg:w-1/2 flex flex-col gap-4 p-10 bg-white">
 
-          <h2 class="text-sky-400 text-center font-extrabold text-2xl md:text-2xl mb-4">Registro</h2>
-
-          <!-- Nombre -->
-          <div class="flex flex-col gap-2">
-            <label for="name-input" class="font-bold text-zinc-900">
-              Nombre <span class="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="name-input"
-              name="name-input"
-              autocomplete="off"
-              placeholder="Ingresa tu nombre y apellido"
-              class="rounded-full p-2 border border-sky-200 focus:outline-sky-500"
-            />
-            <p class="text-xs text-zinc-800">Tanto el nombre como el apellido deben comenzar en mayusculas.</p>
-          </div>
+          <h2 class="text-sky-400 text-center font-extrabold text-2xl md:text-2xl mb-4">Iniciar sesión</h2>
 
           <!-- Correo -->
           <div class="flex flex-col gap-2">
-            <label for="name-input" class="font-bold text-zinc-900">
+            <label for="email-input" class="font-bold text-zinc-900">
               Correo <span class="text-red-500">*</span>
             </label>
             <input
@@ -75,7 +58,7 @@
 
           <!-- Contraseña -->
           <div class="flex flex-col gap-2">
-            <label for="name-input" class="font-bold text-zinc-900">
+            <label for="password-input" class="font-bold text-zinc-900">
               Contraseña <span class="text-red-500">*</span>
             </label>
             <input
@@ -87,38 +70,22 @@
             />
             <p class="text-xs text-zinc-800">
               Debe tener al menos una letra.<br>
-              Debe tener al menos un numero.<br>
+              Debe tener al menos un número.<br>
               Debe tener al menos 8 caracteres.
-            </p>
-          </div>
-
-          <!-- Confirmar contraseña -->
-          <div class="flex flex-col gap-2">
-            <label for="name-input" class="font-bold text-zinc-900">
-              Confirmar contraseña <span class="text-red-500">*</span>
-            </label>
-            <input
-              type="password"
-              id="match-input"
-              name="match-input"
-              autocomplete="off"
-              class="rounded-full p-2 border border-sky-200 focus:outline-sky-500"
-            />
-            <p class="text-xs text-zinc-800">
-              Debe coincidir con la contraseña ingresada.
             </p>
           </div>
 
           <!-- Botón -->
           <button 
-          id="form-btn"
-          disabled
-          class="mt-4 py-2 bg-sky-200 text-black font-bold rounded-full hover:bg-sky-300 transition ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
-            Registrar
+            id="form-btn"
+            disabled
+            class="mt-4 py-2 bg-sky-200 text-black font-bold rounded-full hover:bg-sky-300 transition ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+            Iniciar sesión
           </button>
         </form>
+      </div>
     </div>
-    </div>
+
     <!-- Scripts -->
     <script src="/components/nav.js"></script>
     <script type="module" src="index.js"></script>
