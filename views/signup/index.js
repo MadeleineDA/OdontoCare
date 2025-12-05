@@ -1,5 +1,5 @@
 import { createNotification } from '../components/notification.js';  // Importa la función de notificación
-
+console.log(axios);
 
 // Selección de elementos del DOM
 const form = document.querySelector('#form');
@@ -83,6 +83,7 @@ form.addEventListener('submit', async e => {
 
         // Enviar los datos al backend para crear el usuario
         const response = await axios.post('/api/users', newUser);
+        console.log('Usuario registrado:', response);
         createNotification(false, "Usuario creado con éxito.");
 
         // Limpiar el formulario después de un registro exitoso

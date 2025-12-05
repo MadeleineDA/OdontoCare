@@ -9,6 +9,7 @@ const axios = require('axios');  // Usamos Axios para hacer la solicitud a la AP
 // API Key de Hunter (asegúrate de tener la clave de API configurada correctamente)
 const HUNTER_API_KEY = process.env.HUNTER_API_KEY;  // Reemplaza con tu clave API real
 
+
 // POST: Crear un nuevo usuario
 usersRouter.post('/', async (request, response) => {
     const { name, email, password } = request.body;
@@ -19,24 +20,6 @@ usersRouter.post('/', async (request, response) => {
         return response.status(400).json({ error: 'Todos los campos son requeridos' });
     }
 
-    // Validación del correo con Hunter API
-    try {
-        const hunterResponse = await axios.get(`https://api.hunter.io/v2/email-verifier?email=${email}&api_key=${HUNTER_API_KEY}`, {
-            params: {
-                email: email,
-                api_key: process.env.HUNTER_API_KEY
-            }
-        });
-
-        // Verificar el estado de la validación
-        if (hunterResponse.data.data.status !== 'valid') {
-            return response.status(400).json({ error: 'El correo no es válido según Hunter' });
-        }
-        console.log('Correo verificado por Hunter:', hunterResponse.data.data.status);
-    } catch (error) {
-        console.error("Error al verificar el correo con Hunter:", error);
-        return response.status(400).json({ error: 'Hubo un problema al verificar el correo' });
-    }
 
     // Verificar si el correo ya existe en la base de datos
     const userExists = await User.findOne({ email });
@@ -63,6 +46,22 @@ usersRouter.post('/', async (request, response) => {
     // Crear un token para el usuario
     const token = jwt.sign({ id: savedUser.id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' });
     console.log('Token generado:', token);
+
+      // Validación del correo con Hunter API
+    try {
+        const hunterResponse = await axios.get(`https://api.hunter.io/v2/email-verifier?email=${email}&api_key=${HUNTER_API_KEY}`);
+        const hunterData = hunterResponse.data.data;
+        console.log('Respuesta de Hunter:', hunterResponse.data.data);
+
+        // Verificar el estado de la validación
+        if (hunterResponse.data.data.status !== 'valid') {
+            return response.status(400).json({ error: 'El correo no es válido' });
+        }
+        console.log('Correo verificado por Hunter:', hunterResponse.data.data.status);
+    } catch (error) {
+        console.error("Error al verificar el correo con Hunter:", error);
+        return response.status(400).json({ error: 'Hubo un problema al verificar el correo' });
+    }
 
     // Responder al cliente con el mensaje de éxito
     return response.status(201).json({ message: 'Usuario creado con éxito', token });
