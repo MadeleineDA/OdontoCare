@@ -29,9 +29,9 @@
             </p>
             <p class="text-zinc-700">
               ¿No tienes cuenta?
-              <a href="/registro/" class="text-sky-400 font-semibold hover:underline">Regístrate</a>
+              <a href="/signup" class="text-sky-400 font-semibold hover:underline">Regístrate</a>
             </p>
-            <a href="/registro/" class="w-full text-center bg-sky-200 text-zinc-950 font-bold py-2 rounded-full hover:bg-sky-300 transition">Crear cuenta</a>
+            <a href="/signup" class="w-full text-center bg-sky-200 text-zinc-950 font-bold py-2 rounded-full hover:bg-sky-300 transition">Crear cuenta</a>
           </div>
         </div>
 
@@ -53,7 +53,6 @@
               placeholder="ejemplo@correo.com"
               class="rounded-full p-2 border border-sky-200 focus:outline-sky-500"
             />
-            <p class="text-xs text-zinc-800">El correo es requerido.</p>
           </div>
 
           <!-- Contraseña -->
@@ -68,17 +67,12 @@
               autocomplete="off"
               class="rounded-full p-2 border border-sky-200 focus:outline-sky-500"
             />
-            <p class="text-xs text-zinc-800">
-              Debe tener al menos una letra.<br>
-              Debe tener al menos un número.<br>
-              Debe tener al menos 8 caracteres.
-            </p>
+            <p id="error-text"class="text-xs" text-zinc-800></p>
           </div>
 
           <!-- Botón -->
           <button 
             id="form-btn"
-            disabled
             class="mt-4 py-2 bg-sky-200 text-black font-bold rounded-full hover:bg-sky-300 transition ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
             Iniciar sesión
           </button>
@@ -88,7 +82,7 @@
 
     <!-- Scripts -->
     <script src="/components/nav.js"></script>
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
     <script type="module" src="../components/notification.js"></script>
   </body>
 </html>

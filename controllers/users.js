@@ -6,8 +6,8 @@ const jwt = require('jsonwebtoken');
 const axios = require('axios');  // Usamos Axios para hacer la solicitud a la API de Hunter
 
 
-// API Key de Hunter (asegúrate de tener la clave de API configurada correctamente)
-const HUNTER_API_KEY = process.env.HUNTER_API_KEY;  // Reemplaza con tu clave API real
+// API Key de Hunter 
+const HUNTER_API_KEY = process.env.HUNTER_API_KEY;  
 
 
 // POST: Crear un nuevo usuario
@@ -27,31 +27,12 @@ usersRouter.post('/', async (request, response) => {
         return response.status(400).json({ error: 'El correo ya está en uso' });
     }
 
-    // Hashear la contraseña
-    const saltRounds = 10;
-    const passwordHash = await bcrypt.hash(password, saltRounds);
-
-    // Crear el nuevo usuario con 'verified' en true
-    const newUser = new User({
-        name,
-        email,
-        passwordHash,
-        verified: true,  // Marcamos como verificado si el correo es válido
-    });
-
-    // Guardar el usuario
-    const savedUser = await newUser.save();
-    console.log('Usuario guardado:', savedUser);
-
-    // Crear un token para el usuario
-    const token = jwt.sign({ id: savedUser.id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' });
-    console.log('Token generado:', token);
 
       // Validación del correo con Hunter API
     try {
         const hunterResponse = await axios.get(`https://api.hunter.io/v2/email-verifier?email=${email}&api_key=${HUNTER_API_KEY}`);
-        const hunterData = hunterResponse.data.data;
-        console.log('Respuesta de Hunter:', hunterResponse.data.data);
+        const hunterData = hunterResponse.data.data.status;
+        console.log('Respuesta de Hunter:', hunterResponse.data.data.status);
 
         // Verificar el estado de la validación
         if (hunterResponse.data.data.status !== 'valid') {
@@ -62,6 +43,27 @@ usersRouter.post('/', async (request, response) => {
         console.error("Error al verificar el correo con Hunter:", error);
         return response.status(400).json({ error: 'Hubo un problema al verificar el correo' });
     }
+
+    // Hashear la contraseña
+    const saltRounds = 10;
+    const passwordHash = await bcrypt.hash(password, saltRounds);
+
+    // Crear el nuevo usuario (que ya es valido)
+    const newUser = new User({
+        name,
+        email,
+        passwordHash,
+        verified: true,  
+    });
+
+    // Guardar el usuario
+    const savedUser = await newUser.save();
+    console.log('Usuario guardado:', savedUser);
+
+    // Crear un token para el usuario
+    const token = jwt.sign({ id: savedUser.id }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' });
+    console.log('Token generado:', token);
+
 
     // Responder al cliente con el mensaje de éxito
     return response.status(201).json({ message: 'Usuario creado con éxito', token });

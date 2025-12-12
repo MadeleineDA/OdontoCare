@@ -7,9 +7,11 @@ const cors = require('cors'); //cors para permitir solicitudes entre dominios
 const cookieParser = require('cookie-parser'); //cookie-parser para manejar cookies
 const morgan = require('morgan'); //morgan para logs de solicitudes
 const usersRouter = require('./controllers/users'); //importar el router de usuarios
+const loginRouter = require('./controllers/login'); //importar el router de login
 const mongodb = require('mongodb'); //mongodb para la base de datos
 const { userExtractor } = require('./middleware/auth'); //importar el middleware de autenticación
 const { MONGO_URI } = require('./config');
+
 
 (async() => {
     try {
@@ -30,12 +32,13 @@ app.use(cookieParser());  // Asegura que las cookies se procesen correctamente
 app.use('/', express.static(path.resolve('views', 'home')));
 app.use('/signup', express.static(path.resolve('views','signup')));
 app.use('/login', express.static(path.resolve('views','login')));
+app.use('/contactanos', express.static(path.resolve('views', 'contactanos')));
 app.use('/imag', express.static(path.resolve('imag')));
 app.use('/components', express.static(path.resolve('views', 'components')));
 app.use('/styles', express.static(path.resolve('views','styles')));
 
 
 //Rutas backend
-app.use('/api/users', usersRouter)
-
+app.use('/api/users', usersRouter);
+app.use('/api/login', loginRouter);
 module.exports = app;
