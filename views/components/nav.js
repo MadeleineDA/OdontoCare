@@ -20,7 +20,7 @@ const createNavHome = () => {
   <!-- NAVBAR ESCRITORIO -->
   <nav id="menu-desktop" class="hidden md:flex  bg-sky-200 shadow-lg rounded-full px-6 py-3 md:px-4 lg:px-20  xl:space-x-16 items-center gap-6 lg:gap-7 text-gray-950 font-medium md:text-xs lg:text-sm xl:text-md">
     <a href="/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">HOME</a>
-    <a href="/#servicios/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
+    <a href="/#servicios" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
     <a href="/citas/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">AGENDA TU CITA</a>
     <a href="/contactanos/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">CONTACTANOS</a>
     <a href="/login/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">INICIAR SESIÓN</a>
@@ -29,7 +29,7 @@ const createNavHome = () => {
   <!-- MENU MOVIL -->
   <div id="menu-movil" class="bg-slate-900/30 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0  flex-col gap-16 p-6 justify-center sm:text-sm items-center hidden">
   <a href="/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">HOME</a>
-  <a href="/#servicios/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
+  <a href="/#servicios" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
   <a href="/citas/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">AGENDA TU CITA</a>
   <a href="/contactanos/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">CONTACTANOS</a>
   <a href="/login/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">INICIAR SESIÓN</a>
@@ -58,7 +58,7 @@ const createNavSignunp = () => {
   <!-- NAVBAR ESCRITORIO -->
   <nav id="menu-desktop" class="hidden md:flex  bg-sky-200 shadow-lg rounded-full px-6 py-3 md:px-4 lg:px-20  xl:space-x-16 items-center gap-6 lg:gap-7 text-gray-950 font-medium md:text-xs lg:text-sm xl:text-md">
     <a href="/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">HOME</a>
-    <a href="/#servicios/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
+    <a href="/#servicios" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
     <a href="/citas/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">AGENDA TU CITA</a>
     <a href="/contactanos/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">CONTACTANOS</a>
     <a href="/login/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">INICIAR SESIÓN</a>
@@ -67,7 +67,7 @@ const createNavSignunp = () => {
   <!-- MENU MOVIL -->
   <div id="menu-movil" class="bg-slate-900/30 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0  flex-col gap-16 p-6 justify-center sm:text-sm items-center hidden">
   <a href="/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">HOME</a>
-  <a href="/#servicios/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
+  <a href="/#servicios" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
   <a href="/citas/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">AGENDA TU CITA</a>
   <a href="/contactanos/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">CONTACTANOS</a>
   <a href="/login/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">INICIAR SESIÓN</a>
@@ -96,7 +96,7 @@ const createNavLogin = () => {
   <!-- NAVBAR ESCRITORIO -->
   <nav id="menu-desktop" class="hidden md:flex  bg-sky-200 shadow-lg rounded-full px-6 py-3 md:px-4 lg:px-20  xl:space-x-16 items-center gap-6 lg:gap-7 text-gray-950 font-medium md:text-xs lg:text-sm xl:text-md">
     <a href="/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">HOME</a>
-    <a href="/#servicios/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
+    <a href="/#servicios" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
     <a href="/citas/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">AGENDA TU CITA</a>
     <a href="/contactanos/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">CONTACTANOS</a>
     <a href="/login/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">INICIAR SESIÓN</a>
@@ -105,7 +105,7 @@ const createNavLogin = () => {
   <!-- MENU MOVIL -->
   <div id="menu-movil" class="bg-slate-900/30 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0  flex-col gap-16 p-6 justify-center sm:text-sm items-center hidden">
   <a href="/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">HOME</a>
-  <a href="/#servicios/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
+  <a href="/#servicios" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
   <a href="/citas/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">AGENDA TU CITA</a>
   <a href="/contactanos/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">CONTACTANOS</a>
   <a href="/login/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">INICIAR SESIÓN</a>
@@ -134,7 +134,7 @@ const createNavContactanos = () => {
   <!-- NAVBAR ESCRITORIO -->
   <nav id="menu-desktop" class="hidden md:flex  bg-sky-200 shadow-lg rounded-full px-6 py-3 md:px-4 lg:px-20  xl:space-x-16 items-center gap-6 lg:gap-7 text-gray-950 font-medium md:text-xs lg:text-sm xl:text-md">
     <a href="/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">HOME</a>
-    <a href="/#servicios/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
+    <a href="/#servicios" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
     <a href="/citas/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">AGENDA TU CITA</a>
     <a href="/contactanos/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">CONTACTANOS</a>
     <a href="/login/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">INICIAR SESIÓN</a>
@@ -143,7 +143,7 @@ const createNavContactanos = () => {
   <!-- MENU MOVIL -->
   <div id="menu-movil" class="bg-slate-900/30 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0  flex-col gap-16 p-6 justify-center sm:text-sm items-center hidden">
   <a href="/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">HOME</a>
-  <a href="/#servicios/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
+  <a href="/#servicios" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
   <a href="/citas/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">AGENDA TU CITA</a>
   <a href="/contactanos/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">CONTACTANOS</a>
   <a href="/login/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">INICIAR SESIÓN</a>
@@ -185,7 +185,7 @@ menuBtn.addEventListener("click", () => {
 
   });
 
-document.querySelectorAll('a[href="/#servicios/"]').forEach(link => {
+document.querySelectorAll('a[href="/#servicios"]').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector('#servicios');
@@ -199,7 +199,7 @@ document.querySelectorAll('a[href="/#servicios/"]').forEach(link => {
 
 // Scroll automático si llegas desde otra página
 window.addEventListener('load', () => {
-  if (window.location.hash === "/#servicios/") {
+  if (window.location.hash === "/#servicios") {
     const target = document.querySelector('#servicios');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
