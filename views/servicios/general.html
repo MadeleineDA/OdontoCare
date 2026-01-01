@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Odontologia General | OdontoCare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body class="bg-zinc-100 text-zinc-900">
+
+    <!-- HEADER -->
+   <header id="main-navbar" class="fixed top-0 left-0 right-0 sm:px-9 py-5 flex items-center justify-between z-50">
+    <div class="flex gap-3 items-center ml-4">
+    <img src="../imag/logoNav.png" class="w-10 md:w-10" alt="logo">
+    <span class="sm:text-md md:text-xl lg:text-2xl font-bold text-black">OdontoCare</span>
+  </div>
+
+  <!-- ICONO HAMBURGUESA VERSION MOVIL -->
+  <svg id="menu-boton"
+       xmlns="http://www.w3.org/2000/svg"
+       fill="none"
+       viewBox="0 0 24 24"
+       stroke-width="1.5"
+       stroke="currentColor"
+       class="w-9 h-9 md:hidden text-stone-700 cursor-pointer hover:bg-sky-200 mr-4 rounded-lg p-1">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+
+  <!-- NAVBAR ESCRITORIO -->
+  <nav id="menu-desktop" class="hidden md:flex  bg-sky-200 shadow-lg rounded-full px-6 py-3 md:px-4 lg:px-20  xl:space-x-16 items-center gap-6 lg:gap-7 text-gray-950 font-medium md:text-xs lg:text-sm xl:text-md">
+    <a href="/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">HOME</a>
+    <a href="/servicios/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">SERVICIOS</a>
+    <a href="/citas/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">AGENDA TU CITA</a>
+    <a href="/contactanos/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">CONTACTANOS</a>
+    <a href="/login/" class="hover:text-black hover:border-b-2 hover:border-black pb-1">INICIAR SESIÓN</a>
+  </nav>
+
+  <!-- MENU MOVIL -->
+  <div id="menu-movil" class="bg-slate-900/30 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0  flex-col gap-16 p-6 justify-center sm:text-sm items-center hidden">
+  <a href="/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">HOME</a>
+  <a href="/servicios/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">SERVICIOS</a>
+  <a href="/citas/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">AGENDA TU CITA</a>
+  <a href="/contactanos/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">CONTACTANOS</a>
+  <a href="/login/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">INICIAR SESIÓN</a>
+  <a href="/signup/" class="bg-sky-400 hover:bg-sky-600 text-white font-semibold py-4 px-8 rounded-full">CREAR CUENTA</a>
+  </div>
+  </header>
+
+  <main class="min-h-screen flex flex-col">
+
+    <!-- Caja completa -->
+    <section class="w-full py-10 px-4 sm:px-8 lg:px-20 flex-1 mt-24">
+      <div class="max-w-6xl mx-auto bg-white shadow-xl rounded-3xl p-6 sm:p-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
+
+          <!-- Texto -->
+          <div class="space-y-5 sm:space-y-6">
+            <h2 class="text-2xl xl:text-4xl md:text-3xl font-bold text-sky-300">Odontología General
+                <span class="text-zinc-400">➤</span>
+            </h2>
+
+            <p class="text-zinc-700 leading-relaxed text-sm sm:text-base text-justify">
+              El odontólogo general realiza la primera entrevista al paciente y evalúa su condición bucal, si hay o no caries o alguna condición de las encías. De acuerdo con el diagnóstico y la condición observada en esta unidad, se deriva el caso al especialista respectivo.
+            </p>
+
+            <p class="text-zinc-700 leading-relaxed text-sm sm:text-base text-justify">
+              El equipo de odontólogos generales de nuestra clínica dental, cuenta con una amplia experiencia para hacer la evaluación inicial y realizar los tratamientos necesarios de las estructuras pertenecientes a la cavidad oral.
+            </p>
+
+            <p class="text-xl sm:text-base font-semibold text-zinc-950">
+              Por lo general, entre las afecciones más comunes que atiende el odontólogo general, están:
+              </p>
+
+
+            <p class="text-zinc-700 leading-relaxed text-sm sm:text-base text-justify">
+              <span class="text-zinc-700 font-semibold">• Caries:</span> La caries dental es la enfermedad número uno del mundo y puede afectar desde los niños en edad escolar hasta los ancianos. Se trata del daño de los tejidos que conforman la estructura del diente, a causa de la acción microbiana.
+            </p>
+
+            <p class="text-zinc-700 leading-relaxed text-sm sm:text-base text-justify">
+              <span class="text-zinc-700 font-semibold">• Gingivitis:</span>Como su palabra lo indica es la inflamación de las encías; y solo puede reducirse o eliminarse por medio de la limpieza ultrasónica y cepillado dental. Cabe mencionar, que es el odontólogo el encargado de hacer ese tipo de limpiezas.
+            </p>
+          </div>
+
+          <!-- Imagen -->
+          <div class="justify-center hidden sm:flex">
+            <img 
+              src="../../imag/general.jpeg"
+              alt="Procedimiento de ortodoncia"
+              class="rounded-full w-8 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover shadow-lg"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 py-6 px-2 text-center text-zinc-100 flex flex-col items-center justify-center gap-6">
+
+      <!-- Dirección -->
+      <p class="flex items-center gap-2 font-semibold text-sm sm:text-base">
+        <i class="fa-solid fa-location-dot"></i>
+        C.C. Millennium torre de oficinas piso 2 oficina N2-02. Los Dos Caminos
+      </p>
+
+      <!-- Iconos sociales -->
+      <div class="flex items-center gap-8 justify-center">
+
+        <!-- Instagram -->
+        <a href="#" class="flex flex-col items-center text-pink-500 hover:text-pink-600">
+          <img src="../../imag/agenda3.png" alt="Instagram" class="w-7 h-7">
+          <span class="text-xs mt-1 font-semibold">Instagram</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="#" class="flex flex-col items-center text-green-500 hover:text-green-600">
+          <img src="../../imag/agenda2.png" alt="WhatsApp" class="w-7 h-7">
+          <span class="text-xs mt-1 font-semibold">Whatsapp</span>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" class="flex flex-col items-center text-blue-600 hover:text-blue-700">
+          <img src="../../imag/facebook.png" alt="Facebook" class="w-7 h-7">
+          <span class="text-xs mt-1 font-semibold">Facebook</span>
+        </a>
+      </div>
+    </footer>
+  </main>
+  <script src="../components/nav.js"></script>
+</body>
+</html>
+
