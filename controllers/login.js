@@ -3,7 +3,7 @@ const loginRouter = require("express").Router();
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
+const { userExtractor } = require('../middleware/auth');
 
 //Ruta POST / (login)
 loginRouter.post('/', async (request, response) => {
@@ -54,6 +54,26 @@ loginRouter.post('/', async (request, response) => {
 
     //Respuesta con exito
     return response.sendStatus(200);
+});
+
+
+// GET /api/login/check
+loginRouter.get('/check', userExtractor, (req, res) => {
+    if (!req.user) return res.json({ logged: false });
+    res.json({ 
+        logged: true,
+        user: {
+            name: req.user.name || req.user.email  // o cualquier campo que quieras mostrar
+        }
+    });
+});
+
+
+
+// LOGOUT POST /api/login/logout
+loginRouter.post('/logout', (req, res) => {
+  res.clearCookie('accessToken');
+  res.sendStatus(200);
 });
 
 

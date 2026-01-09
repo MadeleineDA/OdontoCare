@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacto y Agenda de Cita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-white">
+
+  <!-- NAVBAR (ya lo tienes en tu proyecto) -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 sm:px-9 py-5 flex items-center justify-between z-50">
+  </header>
+  <div id="movil" class="bg-slate-900/60 backdrop-blur-lg fixed top-16 right-0 left-0 bottom-0 flex-col gap-16 p-6 justify-center items-center hidden">
+  </div>
+
+  <!-- SECCIÓN PRINCIPAL CONTACTO + FORMULARIO -->
+  <main class="pt-28 pb-16 px-4">
+    <section class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+      
+      <!-- COLUMNA IZQUIERDA: TEXTO, INFO, COPY -->
+      <div class="space-y-6">
+        <p class="text-xs font-semibold tracking-[0.25em] uppercase text-sky-700">
+          Contáctanos, te esperamos
+        </p>
+        <h1 class="text-4xl lg:text-5xl font-extrabold font-sans text-gray-950 leading-tight mb-12">
+    Agenda <span class="text-sky-500">tu cita</span> con total <span class="text-stone-400">comodidad.</span>
+  </h1>
+
+        <p class="text-base text-zinc-700">
+          En OdontoCare pensamos en tu comodidad y en darte el mejor seguimiento.
+          Por eso te ofrecemos dos formas simples de agendar tu cita, según lo que prefieras:
+        </p>
+
+        <div class="border-l-4 border-stone-950 pl-4 space-y-3">
+        <h3 class="text-lg font-bold text-sky-500">
+          Opción 1: Agenda tu cita por WhatsApp
+        </h3>
+
+        <p class="text-sm font-semibold text-gray-950">
+          Ideal si quieres algo rápido y directo.
+        </p>
+        <p class="text-zinc-700 leading-relaxed text-justify text-base">
+          • Agenda tu cita en minutos.<br/>
+          • Atención personalizada.<br/>
+          • Sin registros ni contraseñas.<br/>
+          • Respuesta inmediata.
+        </p>
+      </div>
+
+
+      <div class="border-l-4 border-stone-950 pl-4 space-y-3">
+        <h3 class="text-lg font-bold text-sky-500">
+          Opción 2: Regístrate e inicia sesión
+        </h3>
+
+        <p class="text-sm font-semibold text-gray-950">
+          Perfecta si deseas control y seguimiento de tus citas.
+        </p>
+        <p class="text-zinc-700 leading-relaxed text-justify text-base">
+          • Historial completo de tus citas.<br/>
+          • Fechas y servicios realizados.<br/>
+          • Estado de pagos (pendiente / aprobado).<br/>
+          • Gestión más organizada de tus consultas.
+        </p>
+
+        <p class="text-zinc-700 font-semibold text-base mt-3 leading-relaxed">
+  Para comenzar, dirígete a la parte superior del sitio y haz clic en
+  <span class="font-bold text-sky-500">Iniciar sesión</span>.
+  Desde allí podrás crear tu cuenta fácilmente y acceder a todas estas ventajas.
+</p>
+      </div>
+
+
+        <div class="pt-6 space-y-4 border-t border-stone-300">
+          <h2 class="text-lg font-bold text-sky-500">
+            Tú eliges cómo atenderte
+          </h2>
+
+          <div class="space-y-2 text-sm text-stone-950">
+            <div>
+              <p class="text-zinc-700 leading-relaxed text-justify text-base">
+                Ya sea que prefieras la rapidez de WhatsApp o el seguimiento completo desde tu cuenta, en OdontoCare estamos para ayudarte</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA: FORMULARIO DE AGENDA (TU FORMULARIO) -->
+      <section class="w-full max-w-xl lg:max-w-md lg:ml-auto">
+        <div class="bg-white border-4 border-gray-100 shadow-sm rounded-2xl px-2 py-2 md:px-8">
+
+          <header class="mb-2 text-center">
+            <p class="text-xs tracking-[0.2em] uppercase text-gray-400 mb-2">
+              Agenda tu cita
+            </p>
+            <h2 class="text-lg font-semibold text-gray-900">
+              Reserva una cita por WhatsApp
+            </h2>
+          </header>
+
+          <!-- Formulario -->
+          <form id="citaForm" class="space-y-4">
+
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">
+                Nombre completo
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                required
+                placeholder="Tu nombre"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                       placeholder:text-gray-400 bg-gray-50"
+              />
+            </div>
+
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">
+                Teléfono
+              </label>
+              <input
+                type="tel"
+                id="telefono"
+                required
+                placeholder="Ej: 04121234567"
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                       placeholder:text-gray-400 bg-gray-50"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="fecha" class="block text-sm font-medium text-gray-700 mb-1">
+                  Fecha
+                </label>
+                <input
+                  type="date"
+                  id="fecha"
+                  required
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                         focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                         bg-gray-50"
+                />
+              </div>
+
+              <div>
+                <label for="hora" class="block text-sm font-medium text-gray-700 mb-1">
+                  Hora
+                </label>
+                <select
+                  id="hora"
+                  required
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                         focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                         bg-gray-50 text-gray-700"
+                >
+                  <option value="" disabled selected>Selecciona una hora</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">01:00 PM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                  <option value="17:00">05:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="doctor" class="block text-sm font-medium text-gray-700 mb-1">
+                Doctor
+              </label>
+              <select
+                id="doctor"
+                required
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                       bg-gray-50 text-gray-700"
+              >
+                <option value="" disabled selected>Selecciona un doctor</option>
+                <option value="doctor1">Dra. María</option>
+                <option value="doctor2">Dr. José</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="servicio" class="block text-sm font-medium text-gray-700 mb-1">
+                Servicio
+              </label>
+              <select
+                id="servicio"
+                required
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                       bg-gray-50 text-gray-700"
+              >
+                <option value="" disabled selected>Selecciona un doctor primero</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="metodoPago" class="block text-sm font-medium text-gray-700 mb-1">
+                Método de pago
+              </label>
+              <select
+                id="metodoPago"
+                required
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                       bg-gray-50 text-gray-700"
+              >
+                <option value="" disabled selected>Selecciona un método de pago</option>
+                <option value="Pago Móvil">Pago Móvil</option>
+                <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Zelle">Zelle</option>
+                <option value="Efectivo">Efectivo</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="nota" class="block text-sm font-medium text-gray-700 mb-1">
+                Nota adicional (opcional)
+              </label>
+              <textarea
+                id="nota"
+                rows="3"
+                placeholder="Ej: Preferencia de horario, dudas específicas, etc."
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 text-sm
+                       focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900
+                       placeholder:text-gray-400 bg-gray-50 resize-none"
+              ></textarea>
+            </div>
+
+            <p
+              id="textError"
+              class="hidden text-red-600 text-sm font-medium text-center mt-2"
+            >
+              Por favor completa todos los campos obligatorios
+            </p>
+
+            <div class="pt-2">
+              <button
+                id="btnAgendar"
+                type="button"
+                class="w-full inline-flex items-center justify-center gap-2
+                       bg-gray-900 text-white py-3 rounded-lg text-sm font-medium
+                       hover:bg-black transition-colors"
+              >
+                Agendar por WhatsApp
+              </button>
+              <p class="text-[11px] text-gray-400 text-center mt-2">
+                No se enviará nada automáticamente. Podrás revisar el mensaje en WhatsApp antes de enviarlo.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="/components/nav.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

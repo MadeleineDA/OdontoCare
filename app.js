@@ -11,6 +11,7 @@ const loginRouter = require('./controllers/login'); //importar el router de logi
 const mongodb = require('mongodb'); //mongodb para la base de datos
 const { userExtractor } = require('./middleware/auth'); //importar el middleware de autenticación
 const { MONGO_URI } = require('./config');
+const userViewsRouter = require('./controllers/userViews');
 
 
 (async() => {
@@ -34,6 +35,7 @@ app.use('/signup', express.static(path.resolve('views','signup')));
 app.use('/login', express.static(path.resolve('views','login')));
 app.use('/contactanos', express.static(path.resolve('views', 'contactanos')));
 app.use('/servicios', express.static(path.resolve('views', 'servicios')));
+app.use('/citas', express.static(path.resolve('views', 'citas')));
 app.use('/imag', express.static(path.resolve('imag')));
 app.use('/components', express.static(path.resolve('views', 'components')));
 app.use('/styles', express.static(path.resolve('views','styles')));
@@ -42,4 +44,8 @@ app.use('/styles', express.static(path.resolve('views','styles')));
 //Rutas backend
 app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
+
+//Rutas vistas para usuarios logueados
+app.use('/user', userViewsRouter); 
+
 module.exports = app;
