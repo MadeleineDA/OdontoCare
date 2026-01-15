@@ -1,4 +1,4 @@
- require('dotenv').config();
+require('dotenv').config();
 const express = require('express'); 
 const app = express();
 const mongoose = require('mongoose'); //mongoose para mongodb
@@ -8,10 +8,13 @@ const cookieParser = require('cookie-parser'); //cookie-parser para manejar cook
 const morgan = require('morgan'); //morgan para logs de solicitudes
 const usersRouter = require('./controllers/users'); //importar el router de usuarios
 const loginRouter = require('./controllers/login'); //importar el router de login
+const citasAdminRouter = require('./controllers/citasAdmin'); //importar el router de citasAdmin
+const citasUsuarioRouter = require('./controllers/citasUsuario');
 const mongodb = require('mongodb'); //mongodb para la base de datos
 const { userExtractor } = require('./middleware/auth'); //importar el middleware de autenticación
+const { requireAdmin } = require('./middleware/rol');
 const { MONGO_URI } = require('./config');
-const userViewsRouter = require('./controllers/userViews');
+
 
 
 (async() => {
@@ -35,17 +38,19 @@ app.use('/signup', express.static(path.resolve('views','signup')));
 app.use('/login', express.static(path.resolve('views','login')));
 app.use('/contactanos', express.static(path.resolve('views', 'contactanos')));
 app.use('/servicios', express.static(path.resolve('views', 'servicios')));
-app.use('/citas', express.static(path.resolve('views', 'citas')));
+app.use('/agenda', express.static(path.resolve('views', 'agenda')));
 app.use('/imag', express.static(path.resolve('imag')));
 app.use('/components', express.static(path.resolve('views', 'components')));
 app.use('/styles', express.static(path.resolve('views','styles')));
+app.use('/usuarios/bienvenido', express.static(path.resolve('views','usuarios','bienvenido')));
+app.use('/admin/controlCitas', express.static(path.resolve('views','admin','controlCitas')));
 
 
 //Rutas backend
 app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
+app.use('/api/citasUsuario', citasUsuarioRouter);
+app.use("/api/admin", citasAdminRouter);
 
-//Rutas vistas para usuarios logueados
-app.use('/user', userViewsRouter); 
 
 module.exports = app;

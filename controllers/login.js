@@ -7,24 +7,19 @@ const { userExtractor } = require('../middleware/auth');
 
 //Ruta POST / (login)
 loginRouter.post('/', async (request, response) => {
-    const { email, password } = request.body;  //Obtener credenciales 
-    // console.log(email, password);
-    const userExist = await User.findOne({ email }) //Buscar el usuario en la base de datos
-     console.log('Este es el user', userExist); 
+    const { email, password } = request.body;
 
-     //Validacion de existencia del usuario
+    const userExist = await User.findOne({ email });
+
     if (!userExist) {
         return response.status(400).json({ error: 'Email o contraseña invalida'});
     }
 
-    //Validacion de verificación de email
     if (!userExist.verified) {
-        return response.status(400).json({ error: 'Tu imail no ha sido verificado'});
+        return response.status(400).json({ error: 'Tu email no ha sido verificado'});
     }
 
-    //Comparar contraseña usando bcrypt
     const isCorrect = await bcrypt.compare(password, userExist.passwordHash);
-    // console.log(isCorrect);
     
     if (!isCorrect) {
         return response.status(400).json({ error: 'Email o contraseña invalida'});
@@ -33,17 +28,12 @@ loginRouter.post('/', async (request, response) => {
     //Preparar payload para el token
     const userForToken = {
         id: userExist.id,
-    }
+    };
 
     //Generar JWT (access token)
     const accessToken = jwt.sign(userForToken, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: '1d'
     });
-
-    // console.log(accessToken);
-
-    //console.log(new Date());
-
 
     //Poner el token en una cookie
     response.cookie('accessToken', accessToken, {
@@ -52,8 +42,11 @@ loginRouter.post('/', async (request, response) => {
         httpOnly: true
     });
 
-    //Respuesta con exito
-    return response.sendStatus(200);
+    // 🔥 ESTA ES LA PARTE IMPORTANTE
+    return response.json({
+        message: "Login exitoso",
+        rol: userExist.rol   // <-- AQUÍ ENVIAMOS EL ROL
+    });
 });
 
 
@@ -63,11 +56,10 @@ loginRouter.get('/check', userExtractor, (req, res) => {
     res.json({ 
         logged: true,
         user: {
-            name: req.user.name || req.user.email  // o cualquier campo que quieras mostrar
+            name: req.user.name || req.user.email
         }
     });
 });
-
 
 
 // LOGOUT POST /api/login/logout
@@ -75,7 +67,5 @@ loginRouter.post('/logout', (req, res) => {
   res.clearCookie('accessToken');
   res.sendStatus(200);
 });
-
-
 
 module.exports = loginRouter;

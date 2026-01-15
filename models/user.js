@@ -1,27 +1,62 @@
-const mongoose = require('mongoose');// dependencia para manejar MongoDB
+const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({ //tabla usuarios
+const userSchema = new mongoose.Schema({
     name: String, 
     email: String,
     passwordHash: String,
     verified: {
         type: Boolean,
         default: false
+    },
+
+    // ROL DEL USUARIO (admin o paciente)
+    rol: {
+        type: String,
+        default: "paciente"
+    },
+
+
+    // CAMPOS NUEVOS PARA EL PERFIL DEL PACIENTE
+    nombreCompleto: {
+        type: String,
+        default: null
+    },
+
+    direccion: {
+        type: String,
+        default: null
+    },
+
+    telefono: {
+        type: String,
+        default: null
+    },
+
+    fechaNacimiento: {
+        type: String,
+        default: null
+    },
+
+    cedula: { 
+        type: String, 
+        default: null 
+    },
+
+    primeraVisita: {
+        type: String,
+        default: null
     }
-    
 });
-//configuración para que al convertir a JSON no muestre ciertos campos
-userSchema.set('toJSON', { // Configuración para transformar el objeto al convertirlo a JSON solo cuando se envía como respuesta
+
+userSchema.set('toJSON', {
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString();
         delete returnedObject._id;
         delete returnedObject.__v;
-        delete returnedObject.passwordHash; // No mostrar el passwordHash
+        delete returnedObject.passwordHash;
     }
-    //userschema es el esquema del modelo de usuario
-
 });
 
-const User = mongoose.model('User', userSchema); //crea el modelo
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
