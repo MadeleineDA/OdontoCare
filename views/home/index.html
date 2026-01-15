@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e9321e9bbd.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js" defer></script>
+<script src="https://files.bpcontent.cloud/2026/01/15/17/20260115171627-C5KGC9MY.js" defer></script>
 </head>
 
 <body class="font-sans text-gray-800 overflow-x-hidden">
@@ -61,11 +63,9 @@
         Somos OdontoCare, tu clínica odontológica de confianza, donde cada sonrisa importa. Combinamos experiencia, dedicación y tecnología de vanguardia para ofrecer tratamientos modernos, efectivos y completamente personalizados, pensados para tu comodidad y bienestar. Nuestro compromiso es que cada visita sea agradable, segura y reconfortante, cuidando tu salud bucal y ayudándote a lucir una sonrisa saludable, radiante y llena de confianza.
       </p>
       <div class="text-center md:text-left md:mb-20 text-base">
-          <button class="bg-sky-600/50 hover:bg-sky-800/50 text-white font-semibold py-4 px-8 rounded-full">
-            MÁS INFORMACIÓN
-          </button>
+          <button onclick="window.location.href='https://www.instagram.com/colosangeles/'" class="bg-sky-600/50 hover:bg-sky-800/50 text-white font-semibold py-4 px-8 rounded-full"> MÁS INFORMACIÓN </button>
         </div>
-    </div>
+    </div>  
   </section>
 
   <!-- SECCIÓN TECNOLOGÍA Y TALENTO -->
@@ -98,9 +98,7 @@
   <div class="mt-6 mb-4 h-px bg-sky-100"></div>
 
   <!-- Botón siempre al final -->
-  <button class="mt-auto bg-sky-600/50 text-base text-white py-2.5 px-6 rounded-full font-medium hover:bg-sky-800/70 transition w-fit">
-    Contáctanos ⟶
-  </button>
+  <a href="../contactanos/" class="mt-auto bg-sky-600/50 text-base text-white py-2.5 px-6 rounded-full font-medium hover:bg-sky-800/70 transition w-fit"> Contáctanos ⟶ </a>
 
 </div>
 
@@ -129,9 +127,11 @@
   <div class="mt-6 mb-4 h-px bg-sky-100"></div>
 
   <!-- Botón siempre al final -->
-  <button class="mt-auto bg-sky-600/50 text-white py-2.5 px-6 rounded-full text-sm font-medium hover:bg-sky-800/70 transition w-fit">
-    Nuestros servicios ⟶
-  </button>
+  <a href="../servicios/"
+   class="mt-auto bg-sky-600/50 text-white py-2.5 px-6 rounded-full text-sm font-medium hover:bg-sky-800/70 transition w-fit">
+  Nuestros servicios ⟶
+</a>
+
 
 </div>
 
@@ -160,9 +160,11 @@
   <div class="mt-6 mb-4 h-px bg-sky-100"></div>
 
   <!-- Botón alineado a la izquierda -->
-  <button class="bg-sky-600/50 text-white py-2.5 px-6 rounded-full text-sm font-medium hover:bg-sky-800/70 transition w-fit">
-    Quiénes somos ⟶
-  </button>
+  <a href="../contactanos/"
+   class="bg-sky-600/50 text-white py-2.5 px-6 rounded-full text-sm font-medium hover:bg-sky-800/70 transition w-fit">
+  Quiénes somos ⟶
+</a>
+
 
 </div>
 
@@ -192,7 +194,11 @@
         </div>
         <h3 class="text-lg font-bold mb-3 text-stone-950">Odontología General</h3>
         <p class="text-gray-600 mb-6 text-base text-justify">Diagnóstico y tratamiento primario de los problemas odontológicos que afectan la salud bucodental del paciente.</p>
-        <button class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+        <a href="../servicios/general/"
+   class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">
+  VER MÁS
+</a>
+
       </div>
 
       <!-- Servicio 2 -->
@@ -204,7 +210,10 @@
         </div>
         <h3 class="text-lg font-bold mb-3 text-stone-950">Ortodoncia</h3>
         <p class="text-gray-600 mb-6 text-base text-justify">Corrección de las estructuras dentomaxilofaciales con el objetivo de restaurar la armonía y mejorar la estética.</p>
-        <button class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+        <a href="../servicios/ortodoncia/"
+   class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">
+  VER MÁS
+</a>
       </div>
 
       <!-- Servicio 3 -->
@@ -216,7 +225,10 @@
         </div>
         <h3 class="text-lg font-bold mb-3 text-stone-950">Endodoncia</h3>
         <p class="text-gray-600 mb-6 text-base text-justify">Tratamiento de piezas dentales que han sufrido de pulpitis, recuperándose la funcionalidad y la estética.</p>
-        <button class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+        <a href="../servicios/endodoncia/"
+   class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">
+  VER MÁS
+</a>
       </div>
 
       <!-- Servicio 4 -->
@@ -228,7 +240,11 @@
         </div>
         <h3 class="text-lg font-bold mb-3 text-stone-950">Cirugía Bucal</h3>
         <p class="text-gray-600 mb-6 text-justify text-base">Trata patologías, lesiones por traumas y defectos congénitos de toda el área maxilofacial, y soluciones estéticas.</p>
-        <button class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+        <a href="../servicios/cirugia/"
+   class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">
+  VER MÁS
+</a>
+    
       </div>
 
       <!-- Servicio 5 -->
@@ -240,7 +256,10 @@
         </div>
         <h3 class="text-lg font-bold mb-3 text-stone-950">Implantes</h3>
         <p class="text-gray-600 mb-6 text-justify text-base">Los implantes dentales proveen la raíz a una pieza ausente, para que se pueda reconstruir artificialmente.</p>
-        <button class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+        <a href="../servicios/implantes/"
+   class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">
+  VER MÁS
+</a>
       </div>
 
       <!-- Servicio 6 -->
@@ -252,7 +271,11 @@
         </div>
         <h3 class="text-lg font-bold mb-3 text-stone-950">Estética y Prótesis Dental</h3>
         <p class="text-gray-600 mb-6 text-justify text-base">Especialidades odontológicas creadas para lograr una imagen armónica unida a un funcionamiento idóneo.</p>
-        <button class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">VER MÁS</button>
+        <a href="../servicios/estetica/"
+   class="bg-sky-600/50 text-white px-6 py-2 rounded-full hover:bg-gray-400 transition">
+  VER MÁS
+</a>
+    
       </div>
     </div>
   </div>
@@ -454,21 +477,9 @@
   <!-- Iconos sociales -->
   <div class="flex items-center gap-8 justify-center">
     <!-- Instagram -->
-    <a href="#" class="flex flex-col items-center text-pink-500 hover:text-pink-600">
+    <a href="https://www.instagram.com/colosangeles/" class="flex flex-col items-center text-pink-500 hover:text-pink-600">
       <img src="../../imag/agenda3.png" alt="Instagram" class="w-7 h-7">
       <span class="text-xs mt-1 font-semibold">Instagram</span>
-    </a>
-
-    <!-- WhatsApp -->
-    <a href="#" class="flex flex-col items-center text-green-500 hover:text-green-600">
-      <img src="../../imag/agenda2.png" alt="WhatsApp" class="w-7 h-7">
-      <span class="text-xs mt-1 font-semibold">Whatsapp</span>
-    </a>
-
-    <!-- Facebook -->
-    <a href="#" class="flex flex-col items-center text-blue-600 hover:text-blue-700">
-      <img src="../../imag/facebook.png" alt="WhatsApp" class="w-7 h-7">
-      <span class="text-xs mt-1 font-semibold">Facebook</span>
     </a>
   </div>
 </footer>

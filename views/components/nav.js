@@ -161,7 +161,7 @@ activarMenuMovil()
 
 const createNavServicios = () => {
   navbar.innerHTML = `<div class="flex gap-3 items-center ml-4">
-    <img src="../imag/logoNav.png" class="w-10 md:w-10" alt="logo">
+    <img src="/imag/logoNav.png" class="w-10 md:w-10" alt="logo">
     <span class="sm:text-md md:text-xl lg:text-2xl font-bold text-black">OdontoCare</span>
   </div>
 
