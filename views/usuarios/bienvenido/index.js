@@ -1,20 +1,20 @@
 // MODAL DE CITA
-const modal = document.getElementById("modal-cita");
-const modalContent = document.getElementById("modal-cita-content");
-const cerrarModal = document.getElementById("cerrar-modal");
-const servicioSelect = document.getElementById("servicio");
-const diaSelect = document.getElementById("dia");
-const horaSelect = document.getElementById("hora");
-const nombreInput = document.getElementById("nombre");
-const direccionInput = document.getElementById("direccion");
-const telefonoInput = document.getElementById("telefono");
-const nacimientoInput = document.getElementById("nacimiento");
-const cedulaInput = document.getElementById("cedula");
-const primeraSelect = document.getElementById("primera");
-const pagoSelect = document.getElementById("pago");
-const comentarioInput = document.getElementById("comentario");
-const razonInput = document.getElementById("razon");
-const formCita = document.getElementById("form-cita");
+const modal = document.querySelector("#modal-cita");
+const modalContent = document.querySelector("#modal-cita-content");
+const cerrarModal = document.querySelector("#cerrar-modal");
+const servicioSelect = document.querySelector("#servicio");
+const diaSelect = document.querySelector("#dia");
+const horaSelect = document.querySelector("#hora");
+const nombreInput = document.querySelector("#nombre");
+const direccionInput = document.querySelector("#direccion");
+const telefonoInput = document.querySelector("#telefono");
+const nacimientoInput = document.querySelector("#nacimiento");
+const cedulaInput = document.querySelector("#cedula");
+const primeraSelect = document.querySelector("#primera");
+const pagoSelect = document.querySelector("#pago");
+const comentarioInput = document.querySelector("#comentario");
+const razonInput = document.querySelector("#razon");
+const formCita = document.querySelector("#form-cita");
 
 // VARIABLES
 let doctorSeleccionado = "";
@@ -22,9 +22,7 @@ let nombreUsuario = "";
 let datosPerfil = {};
 
 
-// ============================================================
-// 🔥 CARGAR PERFIL DEL USUARIO PARA MOSTRAR/OCULTAR CAMPOS
-// ============================================================
+// CARGAR PERFIL DEL USUARIO PARA MOSTRAR/OCULTAR CAMPOS
 async function cargarPerfilUsuario() {
   try {
     const res = await fetch("/api/users/perfil");
@@ -58,17 +56,15 @@ function toggleCampo(idCampo, valor) {
 }
 
 
-// ============================================================
-// 🔥 FUNCIÓN PARA GENERAR MENSAJE PERSONALIZADO DE WHATSAPP
-// ============================================================
+
+// FUNCIÓN PARA GENERAR MENSAJE PERSONALIZADO DE WHATSAPP
 function generarMensajePago(nombre, metodo) {
   return `Hola, soy ${nombre}. Quiero pagar mi cita por ${metodo}. ¿Me pueden indicar el monto y los pasos para confirmar mi pago?`;
 }
 
 
-// ============================================================
-// 🔥 FUNCIÓN PARA REDIRIGIR A WHATSAPP
-// ============================================================
+
+// FUNCIÓN PARA REDIRIGIR A WHATSAPP
 function redirigirPago(metodo) {
   if (!nombreUsuario) {
     mostrarToast("No se pudo obtener tu nombre del perfil", "error");
@@ -83,9 +79,8 @@ function redirigirPago(metodo) {
 }
 
 
-// ============================================================
-// 🔥 FUNCIÓN PARA COLOREAR ESTADOS
-// ============================================================
+
+// FUNCIÓN PARA COLOREAR ESTADOS
 function estadoColor(estado) {
   if (!estado) return "text-gray-500";
 
@@ -105,9 +100,8 @@ function estadoColor(estado) {
 }
 
 
-// ============================================================
-// 🔥 CARGAR HISTORIAL EN TABLA
-// ============================================================
+
+// CARGAR HISTORIAL EN TABLA
 async function cargarHistorialCitas() {
   try {
     const res = await fetch("/api/citasUsuario/citas/mias");
@@ -147,9 +141,8 @@ async function cargarHistorialCitas() {
 window.addEventListener("DOMContentLoaded", cargarHistorialCitas);
 
 
-// ============================================================
-// 🔥 TOAST
-// ============================================================
+
+// TOAST
 function mostrarToast(mensaje, tipo = "success") {
   const toast = document.createElement("div");
 
@@ -183,9 +176,8 @@ function mostrarToast(mensaje, tipo = "success") {
 }
 
 
-// ============================================================
-// 🔥 HORAS DISPONIBLES
-// ============================================================
+
+// HORAS DISPONIBLES
 const horas = [
   "9:00 AM", "10:00 AM", "11:00 AM",
   "12:00 PM", "1:00 PM", "2:00 PM",
@@ -201,9 +193,8 @@ horas.forEach(h => {
 });
 
 
-// ============================================================
-// 🔥 SERVICIOS POR DOCTOR
-// ============================================================
+
+// SERVICIOS POR DOCTOR
 const serviciosDoctor1 = [
   "Consulta inicial",
   "Seguimiento",
@@ -222,9 +213,8 @@ const serviciosDoctor2 = [
 ];
 
 
-// ============================================================
-// 🔥 ABRIR MODAL
-// ============================================================
+
+// ABRIR MODAL
 async function abrirModal(servicios) {
   await cargarPerfilUsuario();
 
@@ -246,9 +236,8 @@ async function abrirModal(servicios) {
 }
 
 
-// ============================================================
-// 🔥 CERRAR MODAL
-// ============================================================
+
+// CERRAR MODAL
 function cerrarModalConAnimacion() {
   modalContent.classList.add("translate-y-full", "opacity-0");
   modalContent.classList.remove("translate-y-0", "opacity-100");
@@ -262,9 +251,8 @@ function cerrarModalConAnimacion() {
 cerrarModal.addEventListener("click", cerrarModalConAnimacion);
 
 
-// ============================================================
-// 🔥 DETECTAR BOTONES
-// ============================================================
+
+// DETECTAR BOTONES
 const botones = document.querySelectorAll("button");
 
 botones.forEach((btn, index) => {
@@ -283,9 +271,8 @@ botones.forEach((btn, index) => {
 });
 
 
-// ============================================================
-// 🔥 VALIDACIÓN GENERAL
-// ============================================================
+
+// VALIDACIÓN GENERAL
 function validarCampos() {
   let valido = true;
 
@@ -336,9 +323,8 @@ function validarCampos() {
 }
 
 
-// ============================================================
-// 🔥 QUITAR ERROR AL ESCRIBIR
-// ============================================================
+
+// QUITAR ERROR AL ESCRIBIR
 document.querySelectorAll("input, select, textarea").forEach(campo => {
   campo.addEventListener("input", () => {
     campo.classList.remove("border-red-500", "bg-red-50");
@@ -346,9 +332,8 @@ document.querySelectorAll("input, select, textarea").forEach(campo => {
 });
 
 
-// ============================================================
-// 🔥 ENVIAR FORMULARIO
-// ============================================================
+
+// ENVIAR FORMULARIO
 formCita.addEventListener("submit", async (e) => {
   e.preventDefault();
 

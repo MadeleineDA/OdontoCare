@@ -7,7 +7,7 @@ const User = require("../models/user");
 
 
 // ============================================================
-// 🔥 1. OBTENER CITAS POR DOCTOR (solo admin)
+//  1. OBTENER CITAS POR DOCTOR (solo admin)
 // ============================================================
 citasAdminRouter.get("/citas/:doctor", userExtractor, requireAdmin, async (req, res) => {
   try {
@@ -23,7 +23,7 @@ citasAdminRouter.get("/citas/:doctor", userExtractor, requireAdmin, async (req, 
 
 
 // ============================================================
-// 🔥 2. OBTENER DETALLES COMPLETOS DE UNA CITA (solo admin)
+//  2. OBTENER DETALLES COMPLETOS DE UNA CITA (solo admin)
 // ============================================================
 citasAdminRouter.get("/cita/:id", userExtractor, requireAdmin, async (req, res) => {
   try {
@@ -40,7 +40,7 @@ citasAdminRouter.get("/cita/:id", userExtractor, requireAdmin, async (req, res) 
 
 
 // ============================================================
-// 🔥 3. ACTUALIZAR ESTADO DE PAGO O ESTADO DE CITA (solo admin)
+//  3. ACTUALIZAR ESTADO DE PAGO O ESTADO DE CITA (solo admin)
 // ============================================================
 citasAdminRouter.put("/citas/:id", userExtractor, requireAdmin, async (req, res) => {
   try {
@@ -64,7 +64,7 @@ citasAdminRouter.put("/citas/:id", userExtractor, requireAdmin, async (req, res)
 
 
 // ============================================================
-// 🔥 4. ELIMINAR CITA (solo admin)
+//  4. ELIMINAR CITA (solo admin)
 // ============================================================
 citasAdminRouter.delete("/citas/:id", userExtractor, requireAdmin, async (req, res) => {
   try {
@@ -81,7 +81,7 @@ citasAdminRouter.delete("/citas/:id", userExtractor, requireAdmin, async (req, r
 
 
 // ============================================================
-// 🔥 5. BUSCAR CITAS POR CÉDULA (solo admin)
+//  5. BUSCAR CITAS POR CÉDULA (solo admin)
 // ============================================================
 citasAdminRouter.get("/buscar/:cedula", userExtractor, requireAdmin, async (req, res) => {
   try {
@@ -97,7 +97,7 @@ citasAdminRouter.get("/buscar/:cedula", userExtractor, requireAdmin, async (req,
 
 
 // ============================================================
-// 🔥 6. CREAR CITA MANUALMENTE (solo admin)
+//  6. CREAR CITA MANUALMENTE (solo admin)
 // ============================================================
 citasAdminRouter.post("/citas", userExtractor, requireAdmin, async (req, res) => {
   try {

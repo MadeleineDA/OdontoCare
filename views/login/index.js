@@ -17,10 +17,10 @@ form.addEventListener('submit', async e => {
         // Enviar login al backend
         const res = await axios.post('/api/login', user);
 
-        // 🔥 Leer el rol que envía el backend
+        //  Leer el rol que envía el backend
         const rol = res.data.rol;
 
-        // 🔥 Redirigir según el rol
+        //  Redirigir según el rol
         if (rol === "admin") {
             window.location.pathname = "/admin/controlCitas";
         } else {

@@ -1,6 +1,4 @@
-// ===============================
 // VARIABLES
-// ===============================
 const tablaJuan = document.querySelector("#tabla-juan tbody");
 const tablaDavid = document.querySelector("#tabla-david tbody");
 
